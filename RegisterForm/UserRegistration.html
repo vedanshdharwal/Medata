@@ -22,7 +22,7 @@
     <b><h1> User Registration</h1></b>
     <div class="alert">Your details has been submitted!!!</div>
     <!-- Form Validation-->
-		<form class="form" id="contactForm">
+		<form class="add-user" id="signup-form">
 	
         First name<br>
         <input type="text" name="firstname" id="firstname" ><br>
@@ -90,7 +90,6 @@ User Profile Picture
 		<input type="file" accept="image/*;capture=camera">	<br></br>	
 		
 			<button type="submit" id="login-button">Submit</button>
-
 		</form>
 		
 	</div>
@@ -113,10 +112,33 @@ User Profile Picture
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
   
-  <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-   <script  src="js/index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
 
+<script>
+	var firebaseConfig = {
+  apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
+  authDomain: "medata-73b29.firebaseapp.com",
+  databaseURL: "https://medata-73b29.firebaseio.com",
+  projectId: "medata-73b29",
+  storageBucket: "medata-73b29.appspot.com",
+  messagingSenderId: "554889395801",
+  appId: "1:554889395801:web:a25249d79f5e7854"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//make auth and firebase instances
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+
+</script>
+
+
+    <script  src="js/index.js"></script>
+    <script  src="js/auth.js"></script>
 
 
 

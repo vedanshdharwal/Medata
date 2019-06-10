@@ -8,7 +8,7 @@
 <body>
     <h3>Welcome User!!</h3>
     <div class="container">
-      <button onclick="logout()" type="submit" value="logout"> logout!</button>
+      <button onclick="logout()" type="submit" id="logout"> logout!</button>
       <p id="dash"></p>
     </div>
     
@@ -16,7 +16,30 @@
     
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
 <script  src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
+    authDomain: "medata-73b29.firebaseapp.com",
+    databaseURL: "https://medata-73b29.firebaseio.com",
+    projectId: "medata-73b29",
+    storageBucket: "medata-73b29.appspot.com",
+    messagingSenderId: "554889395801",
+    appId: "1:554889395801:web:a25249d79f5e7854"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // make auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+</script>
+
+
 <script src="dash-script.js"></script>
 </body>
 </html>

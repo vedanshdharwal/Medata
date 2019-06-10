@@ -1,3 +1,47 @@
+const form = document.querySelector('#signup-form');
+
+//saving data
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('User Details').add({
+		firstname : form.firstname.value,
+		lastname : form.lastname.value,
+		dob : form.dob.value,
+		gender : form.gender.value,
+		bloodGroup : form.bloodGroup.value,
+		height : form.height.value,
+		weight : form.weight.value,
+		health : form.health.value,
+		allergy : form.allergy.value,
+		uid : form.uid.value,
+		email : form.email.value,
+		password : form.password.value,
+		rePassword : form.rePassword.value,
+		contactnumber : form.contactnumber.value,
+		emergencycontactnumber : form.emergencycontactnumber.value,
+		caddress : form.caddress.value,
+		paddress : form.paddress.value
+    });
+    //form.reset();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ 
  // Your web app's Firebase configuration
  var firebaseConfig = {
     apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
@@ -109,3 +153,25 @@ playersRef.on("child_added", function(data, prevChildKey) {
    console.log("gender: " + newPlayer.gender);
    console.log("Previous Player: " + prevChildKey);
 });
+
+
+
+ fname : form.fname.value, 
+		lname : form.lname.value,
+		dob : form.dob.value,
+		gender : form.gender.value,
+		bloodGroup : form.bloodGroup.value,
+		height : form.height.value,
+		weight : form.weight.value,
+		health : form.health.value,
+		allergy : form.allergy.value,
+		uid : form.uid.value,
+		email : form.email.value,
+		password : form.password.value,
+		rePassword : form.rePassword.value,
+		contactnumber : form.contactnumber.value,
+		emergencycontactnumber : form.emergencycontactnumber.value,
+		caddress : form.caddress.value,
+		paddress : form.paddress.value
+
+*/
