@@ -6,12 +6,21 @@
 
 </head>
 <body>
-    <h3>Welcome User!!</h3>
-    <div class="container">
-      <button onclick="logout()" type="submit" id="logout"> logout!</button>
-      <p id="dash"></p>
+    <div class="loggedIn">
+      <h3>Welcome User!!</h3>
+      <div class="container">
+          <p id="dash"> </p>
+      </div>
+      <button type="submit" id="logout"> logout!</button>
     </div>
-    
+    <div class="loggedOut">
+        <h5>Log-in to view data</h5>
+        <button type = "submit" class= "loggedOut" id="log-in button">
+            <a href = "../Login Page - User/User Login.html">Log-in</a>
+        </button>
+
+     </div>
+   
     
     
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
@@ -40,6 +49,7 @@
 </script>
 
 
-<script src="dash-script.js"></script>
+<script src="auth.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

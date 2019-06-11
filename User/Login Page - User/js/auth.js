@@ -14,7 +14,7 @@ loginForm.addEventListener('submit', (e) => {
 
        loginForm.reset();
        //redirect to dashboard page
-       window.open("../User-Dashboard/dashboard.html")
+       window.open("../User-Dashboard/dashboard.html","_top")
    });
 
 });
