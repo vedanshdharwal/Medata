@@ -4,7 +4,7 @@ const loggedOutLinks = document.querySelectorAll('.loggedOut');
 const loggedInLinks = document.querySelectorAll('.loggedIn');
 
 
-const setupUI = (user) => {
+ const setupUI = (user) => {
     if (user) {
         //toggle UI Elements
         loggedOutLinks.forEach(item => item.style.display = 'none');
@@ -14,7 +14,52 @@ const setupUI = (user) => {
         loggedOutLinks.forEach(item => item.style.display = 'block');
         loggedInLinks.forEach(item => item.style.display = 'none');
     }
-}
+} 
+
+/* function renderData(doc){
+    let div = document.createElement('div');
+    let firstname = document.createElement('li');
+    let lastname = document.createElement('li');
+    let dob = document.createElement('li');
+    let gender = document.createElement('li');
+    let qualification = document.createElement('li');
+    let experience = document.createElement('li');
+    let uid = document.createElement('li');
+    let email = document.createElement('li');
+    let contactnumber = document.createElement('li');
+    let emergencycontactnumber = document.createElement('li');
+    let caddress = document.createElement('li');
+    let paddress = document.createElement('li');
+
+    div.setAttribute('data-id', doc.id);
+    firstname.textContent = doc.data().firstname;
+    lastname.textContent = doc.data().lastname;
+    dob.textContent = doc.data().dob;
+    gender.textContent = doc.data().gender;
+    qualification.textContent = doc.data().qualification;
+    experience.textContent = doc.data().experience;
+    uid.textContent = doc.data().uid;
+    email.textContent = doc.data().email;
+    contactnumber.textContent = doc.data().contactnumber;
+    emergencycontactnumber.textContent = doc.data().emergencycontactnumber;
+    caddress.textContent = doc.data().caddress;
+    paddress.textContent = doc.data().paddress;
+
+    div.appendChild(firstname);
+    div.appendChild(lastname);
+    div.appendChild(dob);
+    div.appendChild(gender);
+    div.appendChild(qualification);
+    div.appendChild(experience);
+    div.appendChild(uid);
+    div.appendChild(email);
+    div.appendChild(contactnumber);
+    div.appendChild(emergencycontactnumber);
+    div.appendChild(caddress);
+    div.appendChild(paddress);
+
+    guideList.appendChild(div);
+} */
 
 //setup guides
 const setupGuides = (data,user) => {
@@ -28,6 +73,9 @@ if(data.length){
         console.log(guide.email);
         console.log("hi: hi : ",user.email);
         if(user.email == guide.email){
+           // renderData(doc);
+
+
             const li = `
         
         <!DOCTYPE html>
@@ -56,11 +104,8 @@ if(data.length){
 			<div>
 				<li>Date of Birth: ${guide.dob}<br></li>
                 <li>Gender: ${guide.gender}<br></li>
-                <li>Blood Group: ${guide.bloodGroup}<br></li>
-                <li>Height: ${guide.height} cm<br></li>
-                <li>Weight: ${guide.weight} kgs<br></li>
-                <li>Birth Defects / Serious Health Issue: ${guide.health}<br></li>
-                <li>Allergy: ${guide.allergy}<br></li>
+                <li>Qualification: ${guide.qualification}<br></li>
+                <li>Experience: ${guide.experience} cm<br></li>
                 <li>UID: ${guide.uid}<br></li>
                 <li> Email: ${guide.email}<br></li>
                 <li>Contact Number: ${guide.contactnumber}<br></li>
@@ -87,7 +132,9 @@ if(data.length){
       // `` backticks are used to create template string.... use html in it
       // style this html later on with css to show user info
     });
+
     guideList.innerHTML = html;
+
 }   else{
         // else part
     

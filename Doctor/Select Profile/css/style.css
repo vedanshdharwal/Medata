@@ -55,9 +55,9 @@ body :-ms-input-placeholder {
 }
 .container {
   max-width: 600px;
-  margin: -50px auto;
+  margin: 0 auto;
   padding: 80px 0;
-  height: 500px;
+  height: 400px;
   text-align: center;
 }
 .container h1 {
@@ -118,15 +118,6 @@ form button {
 }
 form button:hover {
   background-color: #f5f7f9;
-}
-
-.radio{
-  color: #fff;
-  -webkit-appearance: radio;
-     -moz-appearance: none;
-          appearance: none;
-          margin: 0px;
-  
 }
 .bg-bubbles {
   position: absolute;
@@ -241,7 +232,7 @@ form button:hover {
 
 
 
-#register-button a{
+#pat{
     text-decoration: none;
     color: #53e3a6;
 }

@@ -52,10 +52,10 @@
 </select> <br></br>
 
 Height [in cms]<br>
-        <input type="text" name="height" id="height"><br>
+        <input type="number" name="height" id="height"><br>
 		
 Weight [in Kgs]<br>
-<input type="text" name="weight" id="weight"><br>
+<input type="number" name="weight" id="weight"><br>
 		
 Birth Defects / Serious Health Issue <br>		
 <textarea name="health" cols="30" rows="5" id="health"></textarea>	<br></br>		
@@ -75,10 +75,10 @@ Retype Password<br>
 <input type="password" name="rePassword" id="rePassword"><br>
 
 Contact Number<br>
-        <input type="text" name="contactnumber" id="contactnumber"><br>
+        <input type="number" name="contactnumber" id="contactnumber"><br>
 
 Emergency Contact Number<br>
-        <input type="text" name="emergencycontactnumber" id="emergencycontactnumber"><br>
+        <input type="number" name="emergencycontactnumber" id="emergencycontactnumber"><br>
 
 Current Address<br>		
 <textarea name="caddress" id="caddress" cols="40" rows="7"></textarea><br></br>
@@ -87,8 +87,10 @@ Permanent Address<br>
 <textarea name="paddress" id="paddress" cols="40" rows="7"></textarea><br></br>
 		
 User Profile Picture
-		<input type="file" accept="image/*;capture=camera">	<br></br>	
-		
+  <input type="file" accept="image/*;capture=camera" value="upload" id="fileButton"><br></br>
+    
+User Type<br>
+<input type="text" placeholder="User" id="userType" value="User" disabled><br></br>
 			<button type="submit" id="login-button">Submit</button>
 		</form>
     
@@ -115,6 +117,7 @@ User Profile Picture
   <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
 
 <script>
 	var firebaseConfig = {

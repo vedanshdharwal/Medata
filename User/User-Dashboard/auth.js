@@ -1,4 +1,3 @@
-const uidGrabber = document.querySelectorAll('li.container');
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
   if(user){

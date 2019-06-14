@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Medata Admin Login</title>
+  <title>Medata Profile</title>
   
    <link rel="icon" href="../../Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
   
@@ -16,17 +16,16 @@
 <body>
 
   <div class="wrapper">
-	<div class="container">
-		<h1>Welcome To Med-Data Login</h1>
-		<h3> Admin Login</h3>
+	<div class="container" id="log-in">
+		<h1>Select Profile</h1>
+		
 		<form class="form" id="login-form">
-			<input type="text" placeholder="Username" id="login-email">
-			<input type="password" placeholder="Password" id="login-password">
-			<button  type="submit" id="login-button">Login</button> <br></br>
-			<button type="submit" id="register-button"><a href="../RegisterForm/AdminRegistration.html">Register</a></button><br>
-
+			<button  type="submit" id="MyProfile-button">My Profile</button> <br> </br>
+			<button  type="submit" id="pat">Patient UID</button> <br> </br>
+			<button  type="submit">Patient Fingerprint</button> <br> </br>
+			
 		</form>
-
+		
 	</div>
 	
 	<ul class="bg-bubbles">
@@ -44,7 +43,6 @@
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-  
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
@@ -71,8 +69,13 @@ const db = firebase.firestore();
 </script>
 
 
-    
+    <script  src="js/index.js"></script>
 	<script  src="js/auth.js"></script>
+	<script src = "../User-Dashboard/index.js"></script>
+	<script src = "../User-Dashboard/auth.js"></script>
+
+
+
 
 </body>
 

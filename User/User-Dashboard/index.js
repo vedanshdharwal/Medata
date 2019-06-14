@@ -28,7 +28,7 @@ if(data.length){
         console.log(guide.email);
         console.log("hi: hi : ",user.email);
         if(user.email == guide.email){
-            const li = `
+           guideList.innerHTML = `
         
         <!DOCTYPE html>
 <html>
@@ -43,10 +43,9 @@ if(data.length){
 
 		<div class="upper-container">
 			<div class="image-container">
-				<img src="profile.jpg" />
+            <img src="photoURL" id="dp"  />
 			</div>
 		</div>
-
 		<div class="lower-container">
 			<div>
 				<h3></h3>
@@ -69,25 +68,25 @@ if(data.length){
                 <li>Permanent Address: ${guide.paddress}<br></li>
                  <!--photo to be added-->
                 <br>
-			</div>
-			<div>
-				<button type = "submit" class="btn">View profile</a>
-                <button type="submit" class="btn loggedIn" id="logout"> Logout! </button>
+            </div>
+            <div>
+            <button type ="button" class = "btn" id="changeDP">Set DP</button>
+                <button type="submit" class="btn" id="logout"> logout!</button>
 			</div>
 		</div>
 
 	</div>
-
+            
 </body>
 </html>     
        `;
-       html = html +li;
+      // html = html +li;
        
         }
       // `` backticks are used to create template string.... use html in it
       // style this html later on with css to show user info
     });
-    guideList.innerHTML = html;
+   // guideList.innerHTML = html;
 }   else{
         // else part
     

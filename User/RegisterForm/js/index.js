@@ -1,35 +1,19 @@
-const form = document.querySelector('#signup-form');
 
-//saving data
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    db.collection('User Details').add({
-		firstname : form.firstname.value,
-		lastname : form.lastname.value,
-		dob : form.dob.value,
-		gender : form.gender.value,
-		bloodGroup : form.bloodGroup.value,
-		height : form.height.value,
-		weight : form.weight.value,
-		health : form.health.value,
-		allergy : form.allergy.value,
-		uid : form.uid.value,
-		email : form.email.value,
-		password : form.password.value,
-		rePassword : form.rePassword.value,
-		contactnumber : form.contactnumber.value,
-		emergencycontactnumber : form.emergencycontactnumber.value,
-		caddress : form.caddress.value,
-		paddress : form.paddress.value
-    });
-	//form.reset();
-	console.log("details submitted");
+const fileButton = document.querySelector("#fileButton");
+
+//listen for file selection
+fileButton.addEventListener('change',function(e){
+	//Get file
+	var file = e.target.files[0];
+
+	//create a storage ref to upload the file
+	var storageRef = firebase.storage().ref('userPhotos/'+ file.name);
+
+	//upload file
+	var task = storageRef.put(file);
+
+
 });
-
-
-
-
-
 
 
 
