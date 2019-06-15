@@ -6,9 +6,10 @@
   <meta charset="UTF-8">
   <title>Medata</title>
   
-   <link rel="icon" href="C:\Users\Jithin Sunny\Desktop\Medata\Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
+   <link rel="icon" href="../../Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
   
-  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
       <link rel="stylesheet" href="css/style.css">
 
   
@@ -22,12 +23,16 @@
 		<form class="form">
 		    <h3> Admin Settings</h3>
 			<br></br>
-			<button type="submit" id="login-button">Add Admin</button>
+			<button   id="add-admin">Add Admin</button>
 			<br> </br>
-			<button type="submit" id="register-button">Remove Admin</button>
+			<button  id="edit-user">Edit Admin Details</button>
 			<br> </br>
-			<button type="submit" id="register-button">Edit Admin Details</button>
-		</form>
+			<button type="button" onclick="document.getElementById('topnav').style.display='block'" id="remove-user">Remove Admin</button><br><br>
+			<div id="topnav" style="display: none">
+					<input type="text"  placeholder="Enter UID" id="searchUID"><span id="para"></span>
+					<button onclick="deleteAdmin()" class="search" type="button"><i class="fa fa-trash-o fa-fw fa-2x"></i></button>
+				</div>
+			</form>
 		
 	</div>
 	
@@ -44,6 +49,47 @@
 		<li></li>
 	</ul>
 </div>
+
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+
+<script>
+	var firebaseConfig = {
+  apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
+  authDomain: "medata-73b29.firebaseapp.com",
+  databaseURL: "https://medata-73b29.firebaseio.com",
+  projectId: "medata-73b29",
+  storageBucket: "medata-73b29.appspot.com",
+  messagingSenderId: "554889395801",
+  appId: "1:554889395801:web:a25249d79f5e7854"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//make auth and firebase instances
+const auth = firebase.auth();
+const db = firebase.firestore();
+</script>
+
+<script>
+	
+function deleteAdmin(){
+	
+	var aadhar = document.getElementById('searchUID').value;
+	db.collection("Admin Details").get().then(snapshot => {
+		snapshot.docs.forEach(doc =>{
+			 const guide = doc.data();
+			 if(aadhar == guide.uid){
+			 doc.ref.delete();
+			alert(guide.firstname + " " +guide.lastname+  " details are deleted!!");
+
+			}
+	 });
+	 });
+}
+</script>
+
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
   

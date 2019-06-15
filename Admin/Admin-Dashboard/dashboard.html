@@ -6,15 +6,15 @@
 
 </head>
 <body>
-    <div class="loggedIn">
-      <div class="container">
+    <div class="loggedIn" style="display: none">
+      <div class="container" style="display: none">
           <p id="dash"> </p>
       </div>
-     <button type="submit" class="btn" id="logout"> logout!</button>
+     <button type="submit" class="btn" id="logout" style="display: none"> logout!</button>
     </div>
-    <div class="loggedOut">
+    <div class="loggedOut" style="display: none">
         <h5>Log-in to view data</h5>
-        <button type = "submit" class= "loggedOut" id="log-in button">
+        <button type = "submit" class= "loggedOut" id="log-in button" style="display: none">
             <a href = "../Login Page - User/User Login.html">Log-in</a>
         </button>
 
@@ -26,6 +26,7 @@
 <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
 <script  src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
 
 <script>
   // Your web app's Firebase configuration

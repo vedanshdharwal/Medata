@@ -31,13 +31,6 @@ if(data.length){
            guideList.innerHTML = `
         
         <!DOCTYPE html>
-<html>
-<head>
-	<title>Profile Card</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
 
 	<div class="card-container">
 
@@ -77,8 +70,7 @@ if(data.length){
 
 	</div>
             
-</body>
-</html>     
+    
        `;
       // html = html +li;
        

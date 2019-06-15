@@ -3,22 +3,22 @@
 const patientUID = userUID['patient-uid'].value;
 alert("user uid value is: ",patientUID); */
 
-const guideList = document.querySelector('#Patientprofile');
+const guideList = document.querySelector('.container');
+const wrapper = document.querySelectorAll('.wrapper');
 // guideList.innerHTML = " ";
 //setup guides
-const setupGuides = (data,user) => {
+const setupGuides = (data) => {
 
     if(data.length){
     
-        let html = '';
+        var html = '';
         data.forEach(doc => {
             const guide = doc.data();
-            
-           
             console.log(document.getElementById('patient-uid').value);
            
             if(document.getElementById('patient-uid').value == guide.uid){
-                
+               // alert(guide.email);
+              
                const li = `
             
             <!DOCTYPE html>
@@ -77,8 +77,10 @@ const setupGuides = (data,user) => {
           // `` backticks are used to create template string.... use html in it
           // style this html later on with css to show user info
         });
-        
+    
+
         guideList.innerHTML = html;
+       // console.log(guideList.innerHTML);
         
       //  $('#namesa').append(guide.firstname);
     }   else{

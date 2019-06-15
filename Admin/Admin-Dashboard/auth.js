@@ -1,5 +1,4 @@
-const uidGrabber = document.querySelectorAll('li.container');
-// listen for auth status changes
+
 auth.onAuthStateChanged(user => {
   if(user){
     console.log("user logged in: ", user.email);
@@ -11,7 +10,7 @@ auth.onAuthStateChanged(user => {
     }); */
     
     //getting data
-  db.collection("User Details").get().then(snapshot => {
+  db.collection("Admin Details").get().then(snapshot => {
     console.log(snapshot.docs);
   setupGuides(snapshot.docs,user);
   setupUI(user);

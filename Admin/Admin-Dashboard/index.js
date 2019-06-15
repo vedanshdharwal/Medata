@@ -56,11 +56,6 @@ if(data.length){
 			<div>
 				<li>Date of Birth: ${guide.dob}<br></li>
                 <li>Gender: ${guide.gender}<br></li>
-                <li>Blood Group: ${guide.bloodGroup}<br></li>
-                <li>Height: ${guide.height} cm<br></li>
-                <li>Weight: ${guide.weight} kgs<br></li>
-                <li>Birth Defects / Serious Health Issue: ${guide.health}<br></li>
-                <li>Allergy: ${guide.allergy}<br></li>
                 <li>UID: ${guide.uid}<br></li>
                 <li> Email: ${guide.email}<br></li>
                 <li>Contact Number: ${guide.contactnumber}<br></li>
