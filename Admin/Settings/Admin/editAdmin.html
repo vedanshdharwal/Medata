@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Medata</title>
+  
+   <link rel="icon" href="../Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
+   
+   
+   
+ 
+</head>
+
+<body>
+<style>
+  input{
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-align: center;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+  border: 1px solid #43b988;
+  border-radius: 5px;
+  }
+   input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+ input:focus {
+  background-color: white;
+  width: 300px;
+  color: #53e3a6;
+}
+ button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 1px solid #43b988;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  color: #53e3a6;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+ button:hover {
+  background-color: #f5f7f9;
+}
+</style>
+  <div class="Pcontainer">
+      <h1>Enter UID </h1>
+      <pre>
+        <input type="text" placeholder="enter admin uid" id="adminUID"><br>
+                                        <button type="button" onclick="myFunction()">search</button>
+      </pre>
+    
+  </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
+
+<script>
+	var firebaseConfig = {
+  apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
+  authDomain: "medata-73b29.firebaseapp.com",
+  databaseURL: "https://medata-73b29.firebaseio.com",
+  projectId: "medata-73b29",
+  storageBucket: "medata-73b29.appspot.com",
+  messagingSenderId: "554889395801",
+  appId: "1:554889395801:web:a25249d79f5e7854"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//make auth and firebase instances
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+
+</script>
+
+
+    <script  src="js/index.js"></script>
+    <script  src="js/auth.js"></script>
+
+
+
+</body>
+
+</html>

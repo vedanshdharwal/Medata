@@ -42,10 +42,10 @@ body :-ms-input-placeholder {
   background: -webkit-gradient(linear, left top, right bottom, from(#50a3a2), to(#53e3a6));
   background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   position: absolute;
-  top: 41.5%;
+  top: 50%;
   left: 0;
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin-top: -200px;
   overflow: hidden;
 }
@@ -56,7 +56,7 @@ body :-ms-input-placeholder {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 80px 0;
   height: 400px;
   text-align: center;
 }
@@ -73,22 +73,6 @@ form {
   position: relative;
   z-index: 2;
 }
-
-#edit-admin a{
-  text-decoration: none;
-  color: #53e3a6;
-}
-
-#edit-doctor a{
-  text-decoration: none;
-  color: #53e3a6;
-}
-
-#edit-user a{
-  text-decoration: none;
-  color: #53e3a6;
-}
-
 form input {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -135,11 +119,6 @@ form button {
 form button:hover {
   background-color: #f5f7f9;
 }
-
-.search{
-  width: 100px;
-}
-
 .bg-bubbles {
   position: absolute;
   top: 0;
@@ -251,47 +230,22 @@ form button:hover {
   }
 }
 
-/*=============user search modal===========================*/
-body {font-family: Arial, Helvetica, sans-serif;}
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+ a{
+    text-decoration: none;
+    color: #53e3a6;
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  color: #000;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+#logged-in button {
+    background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
 }
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/*============user search modal ends============*/

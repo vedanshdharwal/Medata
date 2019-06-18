@@ -42,10 +42,10 @@ body :-ms-input-placeholder {
   background: -webkit-gradient(linear, left top, right bottom, from(#50a3a2), to(#53e3a6));
   background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   position: absolute;
-  top: 41.5%;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: 500px;
+  height: 2400px;
   margin-top: -200px;
   overflow: hidden;
 }
@@ -53,7 +53,7 @@ body :-ms-input-placeholder {
   -webkit-transform: translateY(85px);
           transform: translateY(85px);
 }
-.container {
+.container  {
   max-width: 600px;
   margin: 0 auto;
   padding: 60px 0;
@@ -74,20 +74,6 @@ form {
   z-index: 2;
 }
 
-#edit-admin a{
-  text-decoration: none;
-  color: #53e3a6;
-}
-
-#edit-doctor a{
-  text-decoration: none;
-  color: #53e3a6;
-}
-
-#edit-user a{
-  text-decoration: none;
-  color: #53e3a6;
-}
 
 form input {
   -webkit-appearance: none;
@@ -108,6 +94,15 @@ form input {
           transition-duration: 0.25s;
   font-weight: 300;
 }
+
+textarea{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+textarea :hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
 form input:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
@@ -251,47 +246,12 @@ form button:hover {
   }
 }
 
+
+
+
+
+
 /*=============user search modal===========================*/
-body {font-family: Arial, Helvetica, sans-serif;}
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  color: #000;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /*============user search modal ends============*/

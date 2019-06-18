@@ -14,29 +14,6 @@ fileButton.addEventListener('change',function(e){
 
 });
 
-//saving data
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    db.collection('Doctor Details').add({
-		firstname : form.firstname.value,
-		lastname : form.lastname.value,
-		dob : form.dob.value,
-		gender : form.gender.value,
-		qualification : form.qualification.value,
-		experience : form.experience.value,
-		uid : form.uid.value,
-		email : form.email.value,
-		password : form.password.value,
-		rePassword : form.rePassword.value,
-		contactnumber : form.contactnumber.value,
-		emergencycontactnumber : form.emergencycontactnumber.value,
-		caddress : form.caddress.value,
-		paddress : form.paddress.value,
-		userType : form.userType.value
-    });
-	//form.reset();
-	console.log("details submitted");
-});
 
 
 

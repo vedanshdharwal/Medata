@@ -69,7 +69,6 @@ if(data.length){
     let html = '';
     data.forEach(doc => {
         const guide = doc.data();
-        
         console.log(guide.email);
         console.log("hi: hi : ",user.email);
         if(user.email == guide.email){
@@ -78,17 +77,11 @@ if(data.length){
 
             const li = `
         
-        <!DOCTYPE html>
-<html>
-<head>
-	<title>Profile Card</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+        
 
-<body>
 
 	<div class="card-container">
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 		<div class="upper-container">
 			<div class="image-container">
 				<img src="profile.jpg" />
@@ -98,33 +91,44 @@ if(data.length){
 		<div class="lower-container">
 			<div>
 				<h3></h3>
-				<h4>${guide.firstname}
-             ${guide.lastname}</h4>
+				<h2>${guide.firstname}
+             ${guide.lastname}</h2>
 			</div>
-			<div>
-				<li>Date of Birth: ${guide.dob}<br></li>
-                <li>Gender: ${guide.gender}<br></li>
-                <li>Qualification: ${guide.qualification}<br></li>
-                <li>Experience: ${guide.experience} cm<br></li>
-                <li>UID: ${guide.uid}<br></li>
-                <li> Email: ${guide.email}<br></li>
-                <li>Contact Number: ${guide.contactnumber}<br></li>
-                <li>Emergency Contact Number: ${guide.emergencycontactnumber}<br></li>
-                <li>Current Address: ${guide.caddress}<br></li>
-                <li>Permanent Address: ${guide.paddress}<br></li>
+            <div>
+                <table align="center">
+                <tr>
+                <td><b>Date of Birth</b>: ${guide.dob}</td>
+                <td><b>Email</b>: ${guide.email}</td>
+                </tr>
+                <tr>
+                <td><b>Gender</b>: ${guide.gender}</td>
+                <td><b>Contact Number</b>: ${guide.contactnumber}</td>
+                </tr>
+                <tr>
+                <td><b>Qualification</b>: ${guide.qualification}</td>
+                <td><b>Emergency Contact Number</b>: ${guide.emergencycontactnumber}</td>
+                </tr>
+                <tr>
+                <td><b>Experience</b>: ${guide.experience} </td>
+                <td><b>Current Address</b>: ${guide.caddress}</td>
+                </tr>
+                <tr>
+                <td><b>UID</b>: ${guide.uid}</td>
+                <td><b>Permanent Address</b>: ${guide.paddress}</td>
+                </tr>
                  <!--photo to be added-->
                 <br>
+                </table>
+                
 			</div>
-			<div>
-				<button type = "submit" class="btn">View profile</a>
-                <button type="submit" class="btn loggedIn" id="logout"> Logout! </button>
+			<div class="buttons">
+				<button type = "button" class="btn">View profile</button>
+                <button type="button" onclick='myFunction()' class="btn loggedIn" id="logout1"> Logout! </button>
 			</div>
 		</div>
 
 	</div>
-
-</body>
-</html>     
+   
        `;
        html = html +li;
        
@@ -140,3 +144,12 @@ if(data.length){
     
 }
 }
+
+{/* <tr><br></tr>
+<tr><br></tr>
+<tr><br></tr>
+<tr> <br></tr>
+<tr><br></tr>
+<tr><br></tr>
+<tr><br></tr>
+<tr><br></tr> */}

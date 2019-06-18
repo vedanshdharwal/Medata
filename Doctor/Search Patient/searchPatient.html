@@ -9,15 +9,15 @@
   
   
       <link rel="stylesheet" href="css/style.css">
+     
 
 </head>
 
 <body>
-
-  <div class="wrapper">
-	<div class="container" id="log-in">
-		<h1>Search Patient</h1>
+<div class="container" id="log-in">
+ 	<div class="wrapper">
 		<form class="form" id="search-form">
+				<h1>Search Patient</h1>
 				<input type="text" placeholder="Enter Patient UID" id="patient-uid">
 			<button  type="submit" id="search">Search</button> <br> </br>
 			<button  type="button" >Scan Fingerprint</button> <br> </br>
@@ -26,18 +26,50 @@
 	</div>
 	
 	<ul class="bg-bubbles">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		
 </div>
+
+ <div class="middle_container" style="display: none">
+		<button type="button" style="width: 200px">Add On</button><br><br><br>
+		<div class="middle aa">
+			<table >
+				<tr>
+					<td style="background: none">Height: <input type="number" id="newHeight"></td>
+					<td style="background: none">Weight: <input type="number" id="newWeight"></td>
+					<p >last updated on: <span id="lastUpdate"></span></p>
+				</tr>
+			</table>
+			<h3 style="text-align: left">Analysis:</h3> <br>
+			<textarea name="analysis" id="analysis" cols="40" rows="7"></textarea>
+
+		</div>
+		<div class="middle bb">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio praesentium, velit sunt perferendis consequatur ea delectus facere consectetur illum hic quod itaque minima atque vel et ipsam. Aut, odio voluptates.
+		</div>
+		<br><br><button type="button"  onclick="updateData()" style="width: 200px">Publish</button>
+</div>
+
+<!--<div class="lower_container">
+		<div class="lower aa"><h1>hello</h1>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, non. Incidunt aliquid at adipisci velit dignissimos ab ut perspiciatis alias provident obcaecati expedita neque eos, sapiente modi architecto quis eius explicabo inventore atque qui dolorem? Minima, tempore minus, iure optio, dolores adipisci incidunt id repudiandae harum aperiam alias non aliquid asperiores fugiat quam doloremque dolorum libero consectetur? Ipsa aperiam maxime nam, consectetur ut enim! Aperiam consectetur iure, ullam eveniet molestiae commodi iste eligendi asperiores, incidunt, ab vel ipsam assumenda hic.
+		</div>
+		<div class="lower bb">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio praesentium, velit sunt perferendis consequatur ea delectus facere consectetur illum hic quod itaque minima atque vel et ipsam. Aut, odio voluptates.
+		</div>
+</div> -->
+
+
 </body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
