@@ -14,3 +14,13 @@ $('#pat').click(function(){
     console.log("redirecting to search patient");
     window.open("../Search Patient/searchPatient.html");
 });
+
+//logout
+const logout = document.querySelector("#logout-button");
+logout.addEventListener('click', (e) =>{
+    e.preventDefault();
+    auth.signOut().then(() => {
+        console.log("user signed out")
+        window.open("../Login Page - Doctor/Doctor Login.html","_top");
+    });
+});

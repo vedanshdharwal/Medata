@@ -37,7 +37,7 @@ const setupGuides = (data,user) => {
 				<div class="container">
 				<br></br><br></br><br></br><br></br>
 			
-				<b><h1> User Registration</h1></b>
+				<b><h1>Edit Details</h1></b>
 				
 				<!-- Form Validation-->
 					<form class="add-user" id="signup-form">

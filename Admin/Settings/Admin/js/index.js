@@ -22,23 +22,23 @@ const loggedInLinks = document.querySelectorAll('.loggedIn');
 
 //setup guides
 const setupGuides = (data,user) => {
-	var UID= document.getElementById('userUID').value;
+	var UID= document.getElementById('adminUID').value;
 	if(data.length){
 	
 		let html = '';
 		data.forEach(doc => {
 			const guide = doc.data();
-			console.log(guide.email);
-			console.log("hi: hi : ",user.email);
+			/* console.log(guide.email);
+			console.log("hi: hi : ",user.email); */
 			if(UID == guide.uid){
-			   // renderData(doc);
+				
 				const li = `
 				<link rel="stylesheet" href="css/style.css">
 				<div class="wrapper">
 				<div class="container">
 				<br></br><br></br><br></br><br></br>
 			
-				<b><h1> User Registration</h1></b>
+				<b><h1> Edit Details </h1></b>
 				
 				<!-- Form Validation-->
 					<form class="add-user" id="signup-form">

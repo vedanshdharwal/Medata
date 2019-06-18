@@ -1,13 +1,26 @@
 //search uid
-/* const userUID = document.querySelector('#search-form');
-const patientUID = userUID['patient-uid'].value;
-alert("user uid value is: ",patientUID); */
 
 const guideList = document.querySelector('.container');
 const middleContainer = document.querySelectorAll('.middle_container');
 const wrapper = document.querySelectorAll('.wrapper');
 const form = document.querySelectorAll('#search-form');
 const bubbles = document.querySelectorAll('.bg-bubbles');
+
+//attach file
+const fileButton = document.querySelector("#fileButton");
+
+//listen for file selection
+fileButton.addEventListener('change',function(e){
+	//Get file
+	var file = e.target.files[0];
+
+	//create a storage ref to upload the file
+	var storageRef = firebase.storage().ref('userPrescription/'+ file.name);
+
+	//upload file
+	var task = storageRef.put(file);
+
+});
 
 
 const setupUI = (user) => {
@@ -83,16 +96,15 @@ const setupGuides = (data) => {
            // console.log(document.getElementById('patient-uid').value);
            
             if(document.getElementById('patient-uid').value == guide.uid){
-                //console(guide.data());
+               // console(guide.data());
 
                  //renderData(doc);
 
               
              const li = `
             
-            
 	<div class="card-container">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../Search Patient/css/style.css">
 		<div class="upper-container">
 			<div class="image-container">
 				<img src="profile.jpg" />
@@ -149,12 +161,9 @@ const setupGuides = (data) => {
     
 
         guideList.innerHTML = html;
-       // console.log(guideList.innerHTML);
-        
-      //  $('#namesa').append(guide.firstname);
     }   else{
             // else part
-        
+            document.write('No Data Exists!!!');
     }
     }
     
