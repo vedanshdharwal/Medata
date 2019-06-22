@@ -1,134 +1,138 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
 
-  <meta charset="UTF-8">
-  <title>Medata</title>
-  
-   <link rel="icon" href="../../Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
-  
-  
-      <link rel="stylesheet" href="css/style.css">
- 
+	<meta charset="UTF-8">
+	<title>Medata</title>
+
+	<link rel="icon" href="../../Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
+
+
+	<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-  <div class="wrapper">
-	<div class="container">
-	<br></br><br></br><br></br><br></br><br></br>
+	<div class="wrapper">
+		<div class="container">
+			<br></br><br></br><br></br><br></br><br></br>
 
-		<b><h1> Doctor Registration</h1></b>
-		<div class="alert">Your details has been submitted!!!</div>
-		<!-- Form Validation-->
-		<form class="add-doctor" id="signup-form">
-	
-			First name<br>
-			<input type="text" name="firstname" id="firstname"><br>
-			
-			Last name<br>
-			<input type="text" name="lastname" id="lastname"><br>
-			
-			Date of Birth<input type="date" name="dob" id="dob"><br>
-		
-		Gender : 
-<select name="Gender" id="gender">
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
-  <option value="Other">Other</option>
-</select> <br></br>
+			<b>
+				<h1> Doctor Registration</h1>
+			</b>
+			<div class="alert">Your details has been submitted!!!</div>
+			<!-- Form Validation-->
+			<form class="add-doctor" id="signup-form">
 
-Qualification<br>		
-<textarea name="caddress" cols="40" rows="7" id="qualification"></textarea><br></br>
+				First name<br>
+				<input type="text" name="firstname" id="firstname" required><br>
 
-Experience<br>		
-<textarea name="caddress" cols="40" rows="7" id="experience"></textarea><br></br>
+				Last name<br>
+				<input type="text" name="lastname" id="lastname" required><br>
 
-UID<br>
-        <input type="text" name="uid" id="uid"><br>
-Email<br>
-<input type="text" name="email" id="email"><br>	
+				Date of Birth<input type="date" name="dob" id="dob" required><br>
 
-Password<br>
-<input type="password" name="password" id="password"><br>
+				Gender :
+				<select name="Gender" id="gender">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Other">Other</option>
+				</select> <br></br>
 
-Retype Password<br>
-<input type="password" name="rePassword"><br>
+				Qualification<br>
+				<textarea name="caddress" cols="40" rows="7" id="qualification" required></textarea><br></br>
 
-Contact Number<br>
-        <input type="text" name="contactnumber" id="contactnumber"><br>
+				Experience<br>
+				<textarea name="caddress" cols="40" rows="7" id="experience" required></textarea><br></br>
 
-Emergency Contact Number<br>
-        <input type="text" name="emergencycontactnumber" id="emergencycontactnumber"><br>
+				UID<br>
+				<input type="text" name="uid" id="uid" required><br>
+				Email<br>
+				<input type="text" name="email" id="email" required><br>
 
-Current Address<br>		
-<textarea name="caddress" id="caddress" cols="40" rows="7"></textarea><br></br>
+				Password<br>
+				<label><input type="password" name="password" id="password" required><br>
+					<!-- An element to toggle between password visibility -->
+					Show Password <input type="checkbox" onclick="showPassword()" value="show"></label>
 
-Permanent Address<br>		
-<textarea name="paddress" id="paddress" cols="40" rows="7"></textarea><br></br>
+				Retype Password<br><span id="message"></span>
+				<input type="password" name="rePassword" id="rePassword" required><br>
 
-User Profile Picture
-    
-<input type="file" accept="image/*;capture=camera" value="upload" id="fileButton"><br></br>
+				Contact Number<br>
+				<input type="text" name="contactnumber" id="contactnumber" required><br>
 
-User Type<br>
-<input type="text" placeholder="Doctor" id="userType" value="Doctor" disabled><br></br>
-		
+				Emergency Contact Number<br>
+				<input type="text" name="emergencycontactnumber" id="emergencycontactnumber" required><br>
 
-			<button type="submit" id="login-button">Submit</button>
+				Current Address<br>
+				<textarea name="caddress" id="caddress" cols="40" rows="7" required></textarea><br></br>
 
-		</form>
-		
+				Permanent Address<br>
+				<textarea name="paddress" id="paddress" cols="40" rows="7" required></textarea><br></br>
+
+				User Profile Picture
+
+				<input type="file" accept="image/*;capture=camera" value="upload" id="fileButton"><br></br>
+
+				User Type<br>
+				<input type="text" placeholder="Doctor" id="userType" value="Doctor" disabled><br></br>
+
+
+				<button type="submit" id="login-button">Submit</button>
+
+			</form>
+
+		</div>
+
+
+		<ul class="bg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+
+		</ul>
 	</div>
-	
-	
-	<ul class="bg-bubbles">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		
-	</ul>
-</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-  
-  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
-<script>
-	var firebaseConfig = {
-  apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
-  authDomain: "medata-73b29.firebaseapp.com",
-  databaseURL: "https://medata-73b29.firebaseio.com",
-  projectId: "medata-73b29",
-  storageBucket: "medata-73b29.appspot.com",
-  messagingSenderId: "554889395801",
-  appId: "1:554889395801:web:a25249d79f5e7854"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-//make auth and firebase instances
-const auth = firebase.auth();
-const db = firebase.firestore();
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
 
 
-</script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
+			authDomain: "medata-73b29.firebaseapp.com",
+			databaseURL: "https://medata-73b29.firebaseio.com",
+			projectId: "medata-73b29",
+			storageBucket: "medata-73b29.appspot.com",
+			messagingSenderId: "554889395801",
+			appId: "1:554889395801:web:a25249d79f5e7854"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		//make auth and firebase instances
+		const auth = firebase.auth();
+		const db = firebase.firestore();
 
 
-    <script  src="js/index.js"></script>
-    <script  src="js/auth.js"></script>
+	</script>
+
+
+	<script src="js/index.js"></script>
+	<script src="js/auth.js"></script>
 
 
 

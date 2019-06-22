@@ -73,6 +73,12 @@ form {
   position: relative;
   z-index: 2;
 }
+
+form a{
+  text-decoration: none;
+  color: white;
+}
+
 form input {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -91,6 +97,26 @@ form input {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
   font-weight: 300;
+}
+
+
+#rePassword, #password{
+  margin-bottom: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+#signup-form > label > input[type=checkbox]:nth-child(3){
+  margin-top: 0px;
+  max-width: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 40%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#signup-form > label > input[type=checkbox]:nth-child(3):checked{
+  background: #ffffff;
 }
 
 form input:hover {

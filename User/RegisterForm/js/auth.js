@@ -1,8 +1,35 @@
+//To hide-show password
+function showPassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+
+  //form validation
+  $('#password, #rePassword').on('keyup', function () {
+    if ($('#password').val() == $('#rePassword').val()) {
+      $('#message').html('Matching').css('color', 'green');
+    } else 
+      $('#message').html('Not Matching').css('color', 'red');
+  });
+
 //signup
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log("idhar aa gya");
+   // console.log("idhar aa gya");
+
+   
+    if ($('#password').val() != $('#rePassword').val()) {
+      alert('Passwords do not match ');
+    } else if($('#password').val().length < 6){
+        alert('Password length must be atleast 6 characters')
+    } else{
+
+
     //get user info
     const email = signupForm['email'].value;
     const password = signupForm['password'].value;
@@ -10,7 +37,7 @@ signupForm.addEventListener('submit', (e) => {
     console.log(email,password);
 
    auth.createUserWithEmailAndPassword(email,password).then(cred =>{
-      return db.collection('Admin Details').doc(cred.user.uid).set({
+      return db.collection('User Details').doc(cred.user.uid).set({
         firstname : signupForm.firstname.value,
 		lastname : signupForm.lastname.value,
 		dob : signupForm.dob.value,
@@ -28,7 +55,8 @@ signupForm.addEventListener('submit', (e) => {
 		emergencycontactnumber : signupForm.emergencycontactnumber.value,
 		caddress : signupForm.caddress.value,
 		paddress : signupForm.paddress.value,
-		userType : signupForm.userType.value
+        userType : signupForm.userType.value,
+        date : Date()
       });
     
    }).then(() =>{
@@ -47,7 +75,9 @@ signupForm.addEventListener('submit', (e) => {
     location.reload();
     //redirect to login page
 
-   });
-
+   }).catch ((error) =>{
+    alert('Error - ' + error.message);
+  });
+    }
 });
 

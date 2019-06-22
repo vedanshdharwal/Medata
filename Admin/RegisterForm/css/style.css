@@ -45,7 +45,7 @@ body :-ms-input-placeholder {
   top: 0%;
   left: 0;
   width: 100%;
-  height: 2200px;
+  height: 2400px;
   margin-top: -200px;
   overflow: hidden;
 }
@@ -92,6 +92,27 @@ form input {
           transition-duration: 0.25s;
   font-weight: 300;
 }
+
+
+#rePassword, #password{
+  margin-bottom: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+#signup-form > label > input[type=checkbox]:nth-child(3){
+  margin-top: 0px;
+  max-width: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 40%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#signup-form > label > input[type=checkbox]:nth-child(3):checked{
+  background: #ffffff;
+}
+
 form input:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }

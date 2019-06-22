@@ -4,6 +4,7 @@ const loggedOutLinks = document.querySelectorAll('.loggedOut');
 const loggedInLinks = document.querySelectorAll('.loggedIn');
 
 
+
  const setupUI = (user) => {
     if (user) {
         //toggle UI Elements

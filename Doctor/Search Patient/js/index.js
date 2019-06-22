@@ -166,4 +166,67 @@ const setupGuides = (data) => {
             document.write('No Data Exists!!!');
     }
     }
+
+    function setupHistory(){
+
+        const history = document.querySelector('.lower aa');
+console.log('kjdsbfjsdbfjkb');
+    var userUID = document
+    .querySelector(
+      "#log-in > div > div.lower-container > div:nth-child(2) > table > tbody > tr:nth-child(5) > td:nth-child(1)"
+    )
+    .innerText.substring(5);
+console.log(userUID);
+db.collection("User Details")
+.get()
+.then(snapshot => {
+  snapshot.docs.forEach(doc => {
+    const guide = doc.data();
+    if (userUID == guide.uid) {
+console.log(doc.id);
+        db.collection("User Details")
+        .doc(doc.id)
+        .collection("Prescription").orderBy('date','desc').onSnapshot(snapshot =>{
+      let changes = snapshot.docChanges();
+      changes.forEach(change=> {
+          prescription = change.doc.data();
+          console.log(prescription);
+          document.querySelector("body > div.middle_container > div.lower_container > div.lower.aa").innerHTML += `
+          <p>
+              Date: ${prescription.date} <br>
+              Analysis :  ${prescription.analysis} <br>
+              Morning :  ${prescription.morning} <br>
+              Noon  :  ${prescription.noon} <br>
+              Evening :  ${prescription.evening} <br>
+              <hr>
+          </p>
+      
+      `;
+
+});
+});
+    }
+  });
+});
+
+    }
     
+
+/* 
+    document.querySelector("body > div.middle_container > div.lower_container > div.lower.aa").innerHTML = `
+                <p>
+                    Date: ${prescription.date} <br>
+                    Analysis :  ${prescription.analysis} <br>
+                    Morning :  ${prescription.morning} <br>
+                    Noon  :  ${prescription.noon} <br>
+                    Evening :  ${prescription.evening} <br>
+                    <hr>
+                </p>
+            
+            `;
+			console.log(prescription.date);
+            console.log(prescription.analysis);
+            console.log(prescription.morning);
+            console.log(prescription.noon);
+            console.log(prescription.evening);
+*/

@@ -46,10 +46,12 @@ Email<br>
 <input type="email" name="email" id="email"><br>	
 
 Password<br>
-<input type="password" name="password" id="password"><br>
+<label><input type="password" name="password" id="password" required><br>
+<!-- An element to toggle between password visibility -->
+Show Password <input type="checkbox" onclick="showPassword()" value="show"></label>
 
-Retype Password<br>
-<input type="password" name="rePassword"><br>
+Retype Password<br><span id="message"></span>
+<input type="password" name="rePassword" id="rePassword" required><br>
 
 Contact Number<br>
         <input type="number" name="contactnumber" id="contactnumber"><br>

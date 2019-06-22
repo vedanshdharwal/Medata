@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Medata Profile</title>
-  
-   <link rel="icon" href="../../Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-     
-	  
+	<meta charset="UTF-8">
+	<title>Medata Profile</title>
+
+	<link rel="icon" href="../../Blue Sail Main Logo.png" type="image/gif" sizes="16x16">
+
+
+	<link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
-<div class="container" id="log-in">
- 	<div class="wrapper">
-		<form class="form" id="search-form">
-				<br><br><h1>Search Patient</h1><br><br>
+	<div class="container" id="log-in">
+		<div class="wrapper">
+			<form class="form" id="search-form">
+				<br><br>
+				<h1>Search Patient</h1><br><br>
 				<input type="text" placeholder="Enter Patient UID" id="patient-uid">
-			<button  type="submit" id="search">Search</button> <br> </br>
-			<button  type="button" >Scan Fingerprint</button> <br> </br>
-			
-		</form>
-	</div>
-	
-	<ul class="bg-bubbles">
+				<button type="submit" id="search">Search</button> <br> </br>
+				<button type="button">Scan Fingerprint</button> <br> </br>
+
+			</form>
+		</div>
+
+		<ul class="bg-bubbles">
 			<li></li>
 			<li></li>
 			<li></li>
@@ -37,17 +38,17 @@
 			<li></li>
 			<li></li>
 		</ul>
-		
-</div>
 
- <div class="middle_container" style="display: none">
-		<button type="button" style="width: 200px">Add On</button><br><br><br>
+	</div>
+
+	<div class="middle_container" style="display: none">
+		<button type="button" style="width: 200px">Add On</button><br>
 		<div class="middle aa">
-			<table >
+			<table>
 				<tr>
 					<td style="background: none">Height: <input type="number" id="height"></td>
 					<td style="background: none">Weight: <input type="number" id="weight"></td>
-					<p >last updated on: <span id="lastUpdate"></span></p>
+					<p>last updated on: <span id="lastUpdate"></span></p>
 				</tr>
 			</table>
 			<h3 style="text-align: left">Analysis:</h3> <br>
@@ -58,30 +59,40 @@
 			<h3>Medicines Prescribed</h3>
 			<form id="medicines" style="padding: 10px">
 				<ol>
-					<li><input type="text" class="meds"></li>
-					<li><input type="text" class="meds"></li>
-					<li><input type="text" class="meds"></li>
-					
+					<label>Morning:<input type="text" id="morning" class="meds"></label>
+					<label>Noon:<input type="text" id="noon" class="meds"></label>
+					<label>Evening:<input type="text" id="evening" class="meds"></label>
+
 				</ol>
 			</form>
 			Attach File:
 			<input type="file" accept="image/*;capture=camera" value="upload" id="fileButton"><br></br>
 		</div>
-		<br><br><button type="button"  onclick="updateData()" style="width: 200px">Publish</button>
-</div>
+		<br><br><button type="button" onclick="updateData()" style="width: 200px">Publish</button><br><br><br><br>
+		
+		<button type="button" onclick="history()"> past medical history:</button>
+		<div class="lower_container">
+			
+			<div class="lower aa">
+				<h1>hello</h1>
+				
+			</div>
+			<div class="lower bb">
+				<h3>Red Words</h3><hr><br><br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio praesentium, velit sunt perferendis
+				consequatur ea delectus facere consectetur illum hic quod itaque minima atque vel et ipsam. Aut, odio
+				voluptates.
+			</div>
+		</div>
 
-<!--<div class="lower_container">
-		<div class="lower aa"><h1>hello</h1>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, non. Incidunt aliquid at adipisci velit dignissimos ab ut perspiciatis alias provident obcaecati expedita neque eos, sapiente modi architecto quis eius explicabo inventore atque qui dolorem? Minima, tempore minus, iure optio, dolores adipisci incidunt id repudiandae harum aperiam alias non aliquid asperiores fugiat quam doloremque dolorum libero consectetur? Ipsa aperiam maxime nam, consectetur ut enim! Aperiam consectetur iure, ullam eveniet molestiae commodi iste eligendi asperiores, incidunt, ab vel ipsam assumenda hic.
-		</div>
-		<div class="lower bb">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio praesentium, velit sunt perferendis consequatur ea delectus facere consectetur illum hic quod itaque minima atque vel et ipsam. Aut, odio voluptates.
-		</div>
-</div> -->
+	</div>
+	
+
+
 
 
 </body>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
@@ -91,30 +102,30 @@
 
 <script>
 	var firebaseConfig = {
-  apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
-  authDomain: "medata-73b29.firebaseapp.com",
-  databaseURL: "https://medata-73b29.firebaseio.com",
-  projectId: "medata-73b29",
-  storageBucket: "medata-73b29.appspot.com",
-  messagingSenderId: "554889395801",
-  appId: "1:554889395801:web:a25249d79f5e7854"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+		apiKey: "AIzaSyCsGf8Unv5NVpKA8ixaH1xneeGPDRmWhzw",
+		authDomain: "medata-73b29.firebaseapp.com",
+		databaseURL: "https://medata-73b29.firebaseio.com",
+		projectId: "medata-73b29",
+		storageBucket: "medata-73b29.appspot.com",
+		messagingSenderId: "554889395801",
+		appId: "1:554889395801:web:a25249d79f5e7854"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
 
-//make auth and firebase instances
-const auth = firebase.auth();
-const db = firebase.firestore();
+	//make auth and firebase instances
+	const auth = firebase.auth();
+	const db = firebase.firestore();
 
 
 
 </script>
 
 
-    
-	<script  src="js/auth.js"></script>
-	<script  src="js/index.js"></script>
-	
+
+<script src="js/auth.js"></script>
+<script src="js/index.js"></script>
+
 
 
 

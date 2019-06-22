@@ -25,12 +25,12 @@
 		<form class="add-user" id="signup-form">
 	
         First name<br>
-        <input type="text" name="firstname" id="firstname" ><br>
+        <input type="text" name="firstname" id="firstname" required><br>
         
 		Last name<br>
-        <input type="text" name="lastname" id="lastname"><br>
+        <input type="text" name="lastname" id="lastname" required><br>
 		
-		Date of Birth<input type="date" name="dob" id="dob"><br>
+		Date of Birth<input type="date" name="dob" id="dob" required><br>
 		
 		Gender : 
 <select name="Gender" id="gender">
@@ -52,47 +52,52 @@
 </select> <br></br>
 
 Height [in cms]<br>
-        <input type="number" name="height" id="height"><br>
+        <input type="number" name="height" id="height" required><br>
 		
 Weight [in Kgs]<br>
-<input type="number" name="weight" id="weight"><br>
+<input type="number" name="weight" id="weight" required><br>
 		
 Birth Defects / Serious Health Issue <br>		
-<textarea name="health" cols="30" rows="5" id="health"></textarea>	<br></br>		
+<textarea name="health" cols="30" rows="5" id="health" required></textarea>	<br></br>		
 
 Allergy  [if any]<br>		
-<textarea name="allergy" cols="30" rows="5" id="allergy"></textarea>	<br></br>
+<textarea name="allergy" cols="30" rows="5" id="allergy" required></textarea>	<br></br>
 
 UID<br>
-        <input type="text" name="uid" id="uid"><br>
+        <input type="text" name="uid" id="uid" required><br>
 Email<br>
-<input type="email" name="email" id="email"><br>	
+<input type="email" name="email" id="email" required><br>	
 
 Password<br>
-<input type="password" name="password" id="password"><br>
+<label><input type="password" name="password" id="password" required><br>
+<!-- An element to toggle between password visibility -->
+Show Password <input type="checkbox" onclick="showPassword()" value="show"></label>
 
-Retype Password<br>
-<input type="password" name="rePassword" id="rePassword"><br>
+Retype Password<br><span id="message"></span>
+<input type="password" name="rePassword" id="rePassword" required><br>
 
 Contact Number<br>
-        <input type="number" name="contactnumber" id="contactnumber"><br>
+        <input type="number" name="contactnumber" id="contactnumber" required><br>
 
 Emergency Contact Number<br>
-        <input type="number" name="emergencycontactnumber" id="emergencycontactnumber"><br>
+        <input type="number" name="emergencycontactnumber" id="emergencycontactnumber" required><br>
 
 Current Address<br>		
-<textarea name="caddress" id="caddress" cols="40" rows="7"></textarea><br></br>
+<textarea name="caddress" id="caddress" cols="40" rows="7" required></textarea><br></br>
 
 Permanent Address<br>		
-<textarea name="paddress" id="paddress" cols="40" rows="7"></textarea><br></br>
+<textarea name="paddress" id="paddress" cols="40" rows="7" required></textarea><br></br>
 		
 User Profile Picture
   <input type="file" accept="image/*;capture=camera" value="upload" id="fileButton"><br></br>
     
 User Type<br>
-<input type="text" placeholder="User" id="userType" value="User" disabled><br></br>
-			<button type="submit" id="login-button">Submit</button>
-		</form>
+<input type="text" placeholder="Patient" id="userType" value="Patient" disabled><br></br>
+      <button type="submit" id="login-button">Submit</button><br></br>
+      
+      <a href="../Login Page - User/User Login.html">Already a User?.. Signin</a>
+    </form>
+    
     
 	</div>
 	
