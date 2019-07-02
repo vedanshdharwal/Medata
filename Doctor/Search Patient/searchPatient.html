@@ -18,7 +18,7 @@
 		<div class="wrapper">
 			<form class="form" id="search-form">
 				<br><br>
-				<h1>Search Patient</h1><br><br>
+				<h1>Search Patient</h1><br>
 				<input type="text" placeholder="Enter Patient UID" id="patient-uid">
 				<button type="submit" id="search">Search</button> <br> </br>
 				<button type="button">Scan Fingerprint</button> <br> </br>
@@ -42,10 +42,10 @@
 	</div>
 
 	<div class="middle_container" style="display: none">
-		<button type="button" style="width: 200px">Add On</button><br>
-		<div class="middle aa">
+		<button type="button" id="add_on" style="width: 200px">Add On</button><br>
+		<div class="middle aa" id="aa" style="display: none">
 			<table>
-				<tr>
+				<tr id="htwt">
 					<td style="background: none">Height: <input type="number" id="height"></td>
 					<td style="background: none">Weight: <input type="number" id="weight"></td>
 					<p>last updated on: <span id="lastUpdate"></span></p>
@@ -55,7 +55,7 @@
 			<textarea name="analysis" id="analysis" cols="40" rows="7"></textarea>
 
 		</div>
-		<div class="middle bb">
+		<div class="middle bb" id="bb" style="display: none">
 			<h3>Medicines Prescribed</h3>
 			<form id="medicines" style="padding: 10px">
 				<ol>
@@ -68,13 +68,13 @@
 			Attach File:
 			<input type="file" accept="image/*;capture=camera" value="upload" id="fileButton"><br></br>
 		</div>
-		<br><br><button type="button" onclick="updateData()" style="width: 200px">Publish</button><br><br><br><br>
+		<br><br><button type="button" style="display: none" id="publish" onclick="updateData()" style="width: 200px">Publish</button><br><br><br><br>
 		
-		<button type="button" onclick="history()"> past medical history:</button>
+		<!-- <button type="button" id="history" onclick="history()"> past medical history:</button> -->
 		<div class="lower_container">
 			
 			<div class="lower aa">
-				<h1>hello</h1>
+				<h1>Medical History</h1>
 				
 			</div>
 			<div class="lower bb">

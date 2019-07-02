@@ -11,8 +11,9 @@ search.addEventListener("click", e => {
       //getting data
       db.collection("User Details")
         .onSnapshot(snapshot => {
-          console.log(snapshot.docs);
-          setupGuides(snapshot.docs);
+          let changes = snapshot.docChanges();
+          console.log(changes);
+          setupGuides(changes);
           setupUI(user);
           setupHistory();
         });

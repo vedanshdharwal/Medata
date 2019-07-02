@@ -38,6 +38,21 @@ const setupUI = (user) => {
     }
 } 
 
+$('#add_on').on('click',function(){
+    document.querySelectorAll('#aa').forEach(item => item.style.display = 'block');
+    document.querySelectorAll('#bb').forEach(item => item.style.display = 'block');
+    document.querySelectorAll('#publish').forEach(item => item.style.display = 'block');
+})
+
+$('#history').on('click',function(){
+    console.log('hi');
+    document.querySelectorAll('.lower_container').forEach(item => item.style.display = 'block');
+    document.querySelectorAll('#laa').forEach(item => item.style.display = 'block');
+    document.querySelectorAll('#lbb').forEach(item => item.style.display = 'block');
+   
+})
+
+
 /* function renderData(doc){
     
     
@@ -86,13 +101,13 @@ const setupUI = (user) => {
 // guideList.innerHTML = " ";
 
 //setup guides
-const setupGuides = (data) => {
+const setupGuides = (changes) => {
 
-    if(data.length){
+    if(changes.length){
 
         var html = '';
-        data.forEach(doc => {
-            const guide = doc.data();
+        changes.forEach(change => {
+            const guide = change.doc.data();
            // console.log(document.getElementById('patient-uid').value);
            
             if(document.getElementById('patient-uid').value == guide.uid){
