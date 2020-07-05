@@ -12,7 +12,7 @@ It also solves the problem of Pharmacist having a problem of reading doctor’s 
 -	Fingerprint Sensor 
 -	NodeMCU
 -	Firebase [ Database and Hosting]
--	Website [HTML, CSS, JSP]
+-	Website [HTML, CSS, JS]
 
 
 ## **Working:**
